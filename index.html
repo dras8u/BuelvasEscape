@@ -3,138 +3,793 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects — BuelvasWeb</title>
-  <link rel="canonical" href="https://buelvasweb.com/projects.html">
-  <meta name="description" content="All projects by Esdras Buelvas: web apps, AI, writing, and more." />
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" type="image/svg+xml" />
-  <meta property="og:title" content="Projects — BuelvasWeb" />
-  <meta property="og:description" content="Explore every project: Spots, CoffeeShop, Playlist Constructor, BuelvasWeb, Lucien, Bushido, essays, and more." />
+  <title>Esdras Buelvas — Developer, Creator, Builder</title>
+  <link rel="canonical" href="https://buelvasescape.com/" />
+  <meta name="description" content="Esdras Buelvas — Full-stack developer and creative builder. Web, AI, writing, design." />
+  <meta property="og:title" content="Esdras Buelvas — Developer & Creator" />
+  <meta property="og:description" content="Building things that matter. Web, AI, writing, design." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://buelvasweb.com/projects.html" />
+  <meta property="og:url" content="https://buelvasescape.com/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Projects — BuelvasWeb" />
-  <meta name="twitter:description" content="All projects by Esdras Buelvas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg-dark:#0b0f1a;--bg-dark-img:url('https://i.imgur.com/pUrhAdr.png');--bg-light:#f6f7fb;--text-dark:#fff;--text-light:#1d2333;--panel-dark:rgba(255,255,255,.06);--panel-light:#ffffff;--muted:#9aa3b2;--accent:#3aa0ff;--chip:#2c3346;--chip-light:#eef2ff}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{min-height:100%;font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg-dark-img) no-repeat center/cover;color:var(--text-dark)}
-    body.light{background:var(--bg-light);color:var(--text-light)}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:40px auto;padding:0 20px;position:relative;z-index:1}
-    .topbar{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:24px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .brand img{width:28px;height:28px}
-    .nav{display:flex;gap:14px}
-    .nav a{opacity:.85}
-    .nav a:hover{opacity:1}
-    .toggle{background:none;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:8px 10px;cursor:pointer}
-    body.light .toggle{border-color:rgba(0,0,0,.1)}
-    .panel{background:var(--panel-dark);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
-    body.light .panel{background:var(--panel-light);border-color:rgba(0,0,0,.08)}
-    .controls{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:18px}
-    .search{display:flex;gap:10px}
-    .search input{flex:1;background:#0e1425;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 14px;color:#fff}
-    body.light .search input{background:#fff;border-color:rgba(0,0,0,.1);color:#1d2333}
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{font-size:.9rem;padding:8px 12px;border-radius:999px;background:var(--chip);border:1px solid rgba(255,255,255,.12);cursor:pointer;user-select:none}
-    .chip.active{outline:2px solid var(--accent)}
-    body.light .chip{background:var(--chip-light);border-color:rgba(0,0,0,.08)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .card{display:flex;flex-direction:column;gap:10px;padding:18px}
-    .title{font-weight:700;font-size:1.05rem;line-height:1.2}
-    .meta{display:flex;flex-wrap:wrap;gap:8px}
-    .tag{font-size:.75rem;padding:6px 10px;border-radius:999px;background:#141a2c;border:1px solid rgba(255,255,255,.12);opacity:.9}
-    body.light .tag{background:#f2f3f9;border-color:rgba(0,0,0,.08)}
-    .desc{font-size:.92rem;opacity:.9}
-    .row{display:flex;gap:10px;margin-top:auto}
-    .btn{flex:1;text-align:center;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:transparent}
-    .btn.primary{background:var(--accent);border-color:transparent;color:#091022;font-weight:700}
-    .empty{opacity:.7;padding:24px;text-align:center}
-    .footer{opacity:.7;text-align:center;margin:26px 0}
-    @media (min-width:760px){.controls{grid-template-columns:1fr auto}}
-    #particles-wrap{position:fixed;inset:0;z-index:0;pointer-events:none}
-    #particles{width:100%;height:100%;display:block}
+    :root {
+      --bg: #070810;
+      --bg2: #0d0f1e;
+      --bg3: #131628;
+      --text: #f0f0f5;
+      --muted: #7a7d99;
+      --faint: #1e2138;
+      --border: rgba(255,255,255,0.07);
+      --accent: #e8c97e;
+      --accent2: #7eb8e8;
+      --accent3: #e87eb0;
+      --glow: rgba(232,201,126,0.12);
+    }
+    body.light {
+      --bg: #f5f4ef;
+      --bg2: #eeede6;
+      --bg3: #e6e4da;
+      --text: #15141f;
+      --muted: #6b6880;
+      --faint: #dddbd0;
+      --border: rgba(0,0,0,0.08);
+      --accent: #b8860b;
+      --accent2: #1a5fa8;
+      --accent3: #a83060;
+      --glow: rgba(184,134,11,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(7,8,16,0.75);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    body.light nav { background: rgba(245,244,239,0.85); }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links {
+      display: flex; align-items: center; gap: 32px; list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .btn-hire {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; text-decoration: none;
+      padding: 10px 20px; border-radius: 4px;
+      background: var(--accent); color: #070810;
+      transition: opacity 0.2s;
+    }
+    .btn-hire:hover { opacity: 0.85; }
+    .mode-btn {
+      background: none; border: 1px solid var(--border);
+      border-radius: 4px; padding: 8px 10px; cursor: pointer;
+      color: var(--muted); font-size: 0.9rem; transition: border-color 0.2s;
+    }
+    .mode-btn:hover { border-color: var(--muted); }
+
+    
+    #home {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      padding: 120px 48px 80px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(126,184,232,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 30%, rgba(232,201,126,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 40% at 60% 80%, rgba(232,126,176,0.05) 0%, transparent 60%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0; opacity: 0.03;
+      background-image: linear-gradient(var(--text) 1px, transparent 1px),
+                        linear-gradient(90deg, var(--text) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 900px; width: 100%;
+    }
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 24px; opacity: 0;
+      animation: fadeUp 0.8s 0.1s ease forwards;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s ease forwards;
+    }
+    .hero-title em {
+      font-style: italic; color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 1.15rem; font-weight: 300; line-height: 1.7;
+      color: var(--muted); max-width: 540px;
+      margin-top: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s ease forwards;
+    }
+    .hero-ctas {
+      display: flex; gap: 16px; margin-top: 44px; flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s ease forwards;
+    }
+    .cta-primary {
+      padding: 16px 36px; border-radius: 4px;
+      background: var(--accent); color: #070810;
+      font-weight: 500; font-size: 0.9rem; letter-spacing: 0.04em;
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .cta-primary:hover { opacity: 0.85; }
+    .cta-secondary {
+      padding: 16px 36px; border-radius: 4px;
+      border: 1px solid var(--border); color: var(--text);
+      font-weight: 400; font-size: 0.9rem; letter-spacing: 0.04em;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .cta-secondary:hover { border-color: var(--muted); }
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; animation: bob 2s ease-in-out infinite;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--muted), transparent);
+    }
+
+    
+    .stats-bar {
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 48px;
+      display: flex; justify-content: center; gap: 80px; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--accent); line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700; line-height: 1.1;
+      letter-spacing: -0.02em; color: var(--text);
+    }
+    .section-title em { font-style: italic; color: var(--accent); }
+    .divider {
+      width: 100%; height: 1px;
+      background: var(--border);
+    }
+
+    
+    #about .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; margin-top: 60px; align-items: start;
+    }
+    .about-text p {
+      font-size: 1.05rem; line-height: 1.85;
+      color: var(--muted); margin-bottom: 20px;
+    }
+    .about-text p strong { color: var(--text); font-weight: 500; }
+    .skills-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .skill-card {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .skill-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .skill-icon { font-size: 1.4rem; margin-bottom: 10px; }
+    .skill-name {
+      font-weight: 500; font-size: 0.95rem;
+      color: var(--text); margin-bottom: 4px;
+    }
+    .skill-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+    
+    #projects { max-width: 1200px; }
+    .projects-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 24px;
+    }
+    .filter-bar {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .filter-chip {
+      font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 8px 16px;
+      border-radius: 2px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted);
+      cursor: pointer; transition: all 0.2s;
+      font-family: 'DM Mono', monospace;
+    }
+    .filter-chip:hover, .filter-chip.active {
+      border-color: var(--accent); color: var(--accent);
+    }
+    .search-box {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 4px; padding: 10px 16px;
+      color: var(--text); font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; width: 240px;
+      transition: border-color 0.2s; outline: none;
+    }
+    .search-box:focus { border-color: var(--accent); }
+    .search-box::placeholder { color: var(--muted); }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .project-card {
+      background: var(--bg2); padding: 36px 32px;
+      display: flex; flex-direction: column; gap: 16px;
+      transition: background 0.2s; cursor: default;
+      position: relative; overflow: hidden;
+    }
+    .project-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent); transform: scaleX(0);
+      transition: transform 0.3s; transform-origin: left;
+    }
+    .project-card:hover { background: var(--bg3); }
+    .project-card:hover::before { transform: scaleX(1); }
+    .project-type {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .project-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--text); line-height: 1.2;
+    }
+    .project-desc {
+      font-size: 0.9rem; line-height: 1.65;
+      color: var(--muted); flex: 1;
+    }
+    .project-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .project-tag {
+      font-size: 0.72rem; padding: 4px 10px;
+      border: 1px solid var(--border); border-radius: 2px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+    }
+    .project-links {
+      display: flex; gap: 10px; margin-top: 8px;
+    }
+    .proj-btn {
+      font-size: 0.78rem; letter-spacing: 0.06em;
+      padding: 8px 16px; border-radius: 2px;
+      text-decoration: none; transition: all 0.2s;
+      font-family: 'DM Mono', monospace;
+    }
+    .proj-btn.live {
+      background: var(--accent); color: #070810; font-weight: 500;
+    }
+    .proj-btn.live:hover { opacity: 0.85; }
+    .proj-btn.code {
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .proj-btn.code:hover { border-color: var(--muted); color: var(--text); }
+    .no-results {
+      padding: 60px; text-align: center; color: var(--muted);
+      font-size: 0.9rem; background: var(--bg2);
+    }
+
+    
+    #work {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      max-width: 100%; padding: 100px 48px;
+    }
+    #work .inner { max-width: 1200px; margin: 0 auto; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    .service-card {
+      background: var(--bg); padding: 40px 36px;
+      transition: background 0.2s;
+    }
+    .service-card:hover { background: var(--bg3); }
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem; font-weight: 900;
+      color: var(--faint); line-height: 1;
+      margin-bottom: 24px;
+    }
+    body.light .service-num { color: var(--border); }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--text); margin-bottom: 12px;
+    }
+    .service-desc {
+      font-size: 0.9rem; line-height: 1.7; color: var(--muted);
+    }
+    .service-list {
+      list-style: none; margin-top: 20px;
+    }
+    .service-list li {
+      font-size: 0.82rem; color: var(--muted);
+      padding: 6px 0; border-bottom: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+    }
+    .service-list li::before {
+      content: '→ '; color: var(--accent);
+    }
+
+    
+    #contact { text-align: center; }
+    .contact-wrap {
+      margin-top: 60px; max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .contact-tagline {
+      font-size: 1.05rem; color: var(--muted); line-height: 1.7; margin-bottom: 40px;
+    }
+    .contact-links {
+      display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+    }
+    .contact-link {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 4px;
+      border: 1px solid var(--border); color: var(--text);
+      text-decoration: none; font-size: 0.88rem;
+      letter-spacing: 0.04em; transition: all 0.2s;
+      font-family: 'DM Mono', monospace;
+    }
+    .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+    .contact-link.primary {
+      background: var(--accent); color: #070810;
+      border-color: transparent; font-weight: 500;
+    }
+    .contact-link.primary:hover { opacity: 0.85; color: #070810; }
+
+    
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; color: var(--muted);
+    }
+    .footer-copy { font-size: 0.8rem; color: var(--muted); }
+
+    
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bob {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(6px); }
+    }
+
+    
+    #canvas-bg {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      opacity: 0.4;
+    }
+
+    
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      #home { padding: 120px 24px 80px; }
+      section { padding: 60px 24px; }
+      #work { padding: 60px 24px; }
+      #about .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .stats-bar { gap: 40px; padding: 28px 24px; }
+      footer { padding: 24px; }
+    }
   </style>
 </head>
 <body>
-  <div id="particles-wrap"><canvas id="particles"></canvas></div>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt=""> <a href="/">BuelvasWeb</a></div>
-      <div class="nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="#" id="mode" class="toggle">🌙</a></div>
-    </div>
+  <canvas id="canvas-bg"></canvas>
 
-    <div class="panel controls">
-      <div class="search"><input id="q" type="search" placeholder="Search by name, tag, or stack" aria-label="Search projects"></div>
-      <div class="chips" id="chips">
-        <div class="chip active" data-filter="all">All</div>
-        <div class="chip" data-filter="web">Web</div>
-        <div class="chip" data-filter="ai">AI</div>
-        <div class="chip" data-filter="writing">Writing</div>
-        <div class="chip" data-filter="design">Design</div>
-        <div class="chip" data-filter="other">Other</div>
+  
+  <nav>
+    <a href="#home" class="nav-logo">Esdras<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#work">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="mode-btn" id="mode-toggle" aria-label="Toggle theme">☀️</button>
+      <a href="#contact" class="btn-hire">Hire Me</a>
+    </div>
+  </nav>
+
+  
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">// Developer · Creator · Builder</div>
+      <h1 class="hero-title">
+        Building things<br>that <em>matter.</em>
+      </h1>
+      <p class="hero-sub">
+        I'm Esdras Buelvas — a full-stack developer and creative builder working at the intersection of web, AI, and storytelling.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="cta-primary">View My Work</a>
+        <a href="#contact" class="cta-secondary">Let's Talk</a>
       </div>
     </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
 
-    <div class="grid" id="grid"></div>
-    <div class="empty" id="empty" hidden>No matches. Try different filters or search terms.</div>
-
-    <div class="footer">© 2025 Esdras Buelvas</div>
+  
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Projects Built</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Disciplines</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Ideas Left</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Vision</div>
+    </div>
   </div>
 
+  
+  <section id="about">
+    <div class="section-label">// 01 — About</div>
+    <h2 class="section-title">The person<br>behind the <em>code.</em></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm <strong>Esdras Buelvas</strong> — a developer, writer, and creative builder based in the US. My work lives at the crossroads of technology and human experience.
+        </p>
+        <p>
+          I started coding because I wanted to <strong>build things that actually help people</strong> — tools, experiences, stories. Even if most of my work is theoretical, I will put my name out there. That drive hasn't changed. Whether it's a slick web app, an AI experiment, or a long-form essay, I approach every project with the same obsessive attention to craft.
+        </p>
+        <p>
+          I'm currently exploring the edges of <strong>AI-assisted creative work</strong>, building personal tools, and developing my fiction project — The Unwritten Book of Bushido.
+        </p>
+        <p>
+          When I'm not building, I'm writing, reading philosophy, or thinking about systems — human and digital.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">⬡</div>
+          <div class="skill-name">Web Development</div>
+          <div class="skill-desc">HTML, CSS, JavaScript — semantic, performant, accessible.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">◈</div>
+          <div class="skill-name">AI & Tooling</div>
+          <div class="skill-desc">Prompting, agents, Python — building intelligent systems.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">✦</div>
+          <div class="skill-name">UI / Design</div>
+          <div class="skill-desc">Visual systems, layouts, and interfaces that feel intentional.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">❧</div>
+          <div class="skill-name">Writing</div>
+          <div class="skill-desc">Essays, fiction, worldbuilding — ideas given form through language.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  
+  <section id="projects" style="max-width:1200px">
+    <div class="projects-header">
+      <div>
+        <div class="section-label">// 02 — Projects</div>
+        <h2 class="section-title">Things I've <em>built.</em></h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-end">
+        <input class="search-box" id="proj-search" type="search" placeholder="Search projects…" />
+        <div class="filter-bar" id="filters">
+          <button class="filter-chip active" data-f="all">All</button>
+          <button class="filter-chip" data-f="web">Web</button>
+          <button class="filter-chip" data-f="ai">AI</button>
+          <button class="filter-chip" data-f="writing">Writing</button>
+          <button class="filter-chip" data-f="design">Design</button>
+          <button class="filter-chip" data-f="other">Other</button>
+        </div>
+      </div>
+    </div>
+    <div class="projects-grid" id="proj-grid"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  
+  <div id="work">
+    <div class="inner">
+      <div class="section-label">// 03 — Services</div>
+      <h2 class="section-title">How I can<br><em>help you.</em></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <div class="service-name">Web Development</div>
+          <div class="service-desc">Fast, beautiful, semantic websites and web apps built from scratch or improved from what you have.</div>
+          <ul class="service-list">
+            <li>Landing pages & portfolios</li>
+            <li>Full web apps (frontend)</li>
+            <li>Performance & SEO audits</li>
+            <li>Responsive, accessible UI</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <div class="service-name">AI Integration</div>
+          <div class="service-desc">Bring intelligence to your product — smart features, custom assistants, and AI-powered workflows.</div>
+          <ul class="service-list">
+            <li>Custom AI assistants</li>
+            <li>Prompt engineering</li>
+            <li>AI-powered tools & apps</li>
+            <li>Python scripting & automation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <div class="service-name">Creative & Writing</div>
+          <div class="service-desc">Content, copy, and creative work that actually connects — written with craft, not filler.</div>
+          <ul class="service-list">
+            <li>Website & product copy</li>
+            <li>Long-form essays & articles</li>
+            <li>Brand voice & tone guides</li>
+            <li>Technical writing</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <div class="service-name">Design Systems</div>
+          <div class="service-desc">Cohesive visual identity and UI systems that scale — from first concept to polished component library.</div>
+          <ul class="service-list">
+            <li>UI component design</li>
+            <li>Color & typography systems</li>
+            <li>Design-to-code handoff</li>
+            <li>Brand direction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <section id="contact">
+    <div class="section-label">// 04 — Contact</div>
+    <h2 class="section-title">Let's build<br>something <em>together.</em></h2>
+    <div class="contact-wrap">
+      <p class="contact-tagline">
+        Have a project in mind? Need a collaborator? Just want to talk about ideas?
+        My inbox is open. I respond to everyone.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:hello@buelvasescape.com" class="contact-link primary">✉ Send an Email</a>
+        <a href="https://github.com/dras8u" target="_blank" rel="noopener" class="contact-link">⌥ GitHub</a>
+        <a href="https://medium.com/@esdras-buelvas" target="_blank" rel="noopener" class="contact-link">✍ Medium</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="footer-name">Esdras Buelvas</div>
+    <div class="footer-copy">© 2025. Built with intention.</div>
+  </footer>
+
   <script>
-    const data=[
-      {name:"BuelvasWeb",type:"web",desc:"This site. Fast single-file builds, SEO, and clean UI.",tags:["HTML","CSS","JS","SEO"],link:"https://buelvasweb.com",code:"https://github.com/dras8u"},
-      {name:"Spots (TripleTen)",type:"web",desc:"Interactive photo cards with like/save and modals.",tags:["HTML","CSS","JS","BEM"],link:"https://github.com/dras8u/se_project_spots",code:"https://github.com/dras8u/se_project_spots"},
-      {name:"CoffeeShop (TripleTen)",type:"web",desc:"Responsive marketing page with precise brief fidelity.",tags:["HTML","CSS","Layout"],link:"https://github.com/dras8u/se_project_coffeeshop",code:"https://github.com/dras8u/se_project_coffeeshop"},
-      {name:"Playlist Constructor",type:"web",desc:"Vanilla JS playlist builder with templates and forms.",tags:["JS","DOM","Forms"],link:"https://github.com/Isa4444/esdrasweb",code:"https://github.com/Isa4444/esdrasweb"},
-      {name:"Lucien (AI)",type:"ai",desc:"Personal AI assistant concept and tooling.",tags:["AI","Prompting","Agents"],link:"",code:""},
-      {name:"BuelvasEscape",type:"other",desc:"Hospitality/brand concept and site work-in-progress.",tags:["Biz","Web"],link:"https://github.com/dras8u/BuelvasEscape",code:"https://github.com/dras8u/BuelvasEscape"},
-      {name:"The Glitch That Thinks",type:"writing",desc:"Philosophical essay on consciousness (2025).",tags:["Essay","Philosophy"],link:"https://medium.com/@esdras-buelvas/the-glitch-that-thinks-522a3e8c1e74",code:""},
-      {name:"The Unwritten Book of Bushido",type:"writing",desc:"Long-form fiction project.",tags:["Fiction","Worldbuilding"],link:"",code:""},
-      {name:"EsdrasWeb (portfolio repo)",type:"web",desc:"Experiments and site scaffolds.",tags:["HTML","CSS","JS"],link:"https://github.com/Isa4444/esdrasweb",code:"https://github.com/Isa4444/esdrasweb"},
-      {name:"Voice Assistant Proto",type:"ai",desc:"Wake-word and intent sketches.",tags:["Python","NLP"],link:"",code:""}
-    ]
-
-    const grid=document.getElementById('grid')
-    const q=document.getElementById('q')
-    const chips=document.getElementById('chips')
-    const empty=document.getElementById('empty')
-    const mode=document.getElementById('mode')
-
-    function loadMode(){const m=localStorage.getItem('mode')||'dark';if(m==='light')document.body.classList.add('light');mode.textContent=m==='light'?'🌙':'☀️'}
-    function toggleMode(){const light=document.body.classList.toggle('light');localStorage.setItem('mode',light?'light':'dark');mode.textContent=light?'🌙':'☀️'}
-
-    function card(p){
-      const tags=p.tags.map(t=>`<span class='tag'>${t}</span>`).join(' ')
-      const live=p.link?`<a class='btn primary' href='${p.link}' target='_blank' rel='noopener'>Live</a>`:''
-      const src=p.code?`<a class='btn' href='${p.code}' target='_blank' rel='noopener'>Code</a>`:''
-      return `<div class='panel card' data-type='${p.type}' data-text='${(p.name+' '+p.desc+' '+p.tags.join(' ')).toLowerCase()}'>
-        <div class='title'>${p.name}</div>
-        <div class='desc'>${p.desc}</div>
-        <div class='meta'>${tags}</div>
-        <div class='row'>${live}${src}</div>
-      </div>`
+  
+    const cvs = document.getElementById('canvas-bg');
+    const ctx = cvs.getContext('2d');
+    let W, H, pts = [];
+    function resize() {
+      W = cvs.width = window.innerWidth;
+      H = cvs.height = window.innerHeight;
     }
-
-    function render(list){grid.innerHTML=list.map(card).join('');empty.hidden=list.length!==0}
-    function currentFilter(){const a=[...chips.querySelectorAll('.chip')].find(c=>c.classList.contains('active'));return a?a.dataset.filter:'all'}
-    function apply(){
-      const f=currentFilter();
-      const term=q.value.trim().toLowerCase();
-      const out=data.filter(p=>{
-        const okType=f==='all'||p.type===f;
-        const okText=term===''||(`${p.name} ${p.desc} ${p.tags.join(' ')}`.toLowerCase().includes(term));
-        return okType&&okText;
+    function initPts() {
+      pts = Array.from({length: 60}, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3,
+        r: Math.random()*1.5+.5
+      }));
+    }
+    function drawPts() {
+      ctx.clearRect(0,0,W,H);
+      const light = document.body.classList.contains('light');
+      const ptColor = light ? 'rgba(0,0,0,0.15)' : 'rgba(232,201,126,0.35)';
+      const lineColor = light ? 'rgba(0,0,0,0.04)' : 'rgba(232,201,126,0.06)';
+      pts.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if(p.x<0||p.x>W) p.vx*=-1;
+        if(p.y<0||p.y>H) p.vy*=-1;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle = ptColor;
+        ctx.fill();
       });
-      render(out);
+      for(let i=0;i<pts.length;i++) {
+        for(let j=i+1;j<pts.length;j++) {
+          const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+          const d=Math.sqrt(dx*dx+dy*dy);
+          if(d<140) {
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x,pts[i].y);
+            ctx.lineTo(pts[j].x,pts[j].y);
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = .5;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawPts);
+    }
+    resize(); initPts(); drawPts();
+    window.addEventListener('resize', ()=>{resize(); initPts();});
+
+    
+    const modeBtn = document.getElementById('mode-toggle');
+    function applyMode(m) {
+      document.body.classList.toggle('light', m==='light');
+      modeBtn.textContent = m==='light' ? '🌙' : '☀️';
+      localStorage.setItem('mode', m);
+    }
+    modeBtn.addEventListener('click', () => {
+      applyMode(document.body.classList.contains('light') ? 'dark' : 'light');
+    });
+    applyMode(localStorage.getItem('mode') || 'dark');
+
+    
+    const projects = [
+      {name:'BuelvasWeb',type:'web',desc:'This portfolio — fast single-file build with filtering, dark/light mode, and clean SEO.',tags:['HTML','CSS','JS','SEO'],link:'https://buelvasescape.com',code:'https://github.com/dras8u'},
+      {name:'Spots (TripleTen)',type:'web',desc:'Interactive photo card gallery with like/save functionality and responsive modals.',tags:['HTML','CSS','JS','BEM'],link:'https://github.com/dras8u/se_project_spots',code:'https://github.com/dras8u/se_project_spots'},
+      {name:'CoffeeShop (TripleTen)',type:'web',desc:'Pixel-perfect responsive marketing page built to a precise design brief.',tags:['HTML','CSS','Layout'],link:'https://github.com/dras8u/se_project_coffeeshop',code:'https://github.com/dras8u/se_project_coffeeshop'},
+      {name:'Playlist Constructor',type:'web',desc:'Vanilla JS playlist builder using DOM templates and form interactions.',tags:['JS','DOM','Forms'],link:'https://github.com/Isa4444/esdrasweb',code:'https://github.com/Isa4444/esdrasweb'},
+      {name:'Lucien (AI)',type:'ai',desc:'Personal AI assistant concept — custom persona, tooling, and conversational architecture.',tags:['AI','Prompting','Agents'],link:'',code:''},
+      {name:'Voice Assistant Proto',type:'ai',desc:'Wake-word detection and intent-mapping sketches built with Python and NLP.',tags:['Python','NLP','AI'],link:'',code:''},
+      {name:'BuelvasEscape',type:'other',desc:'Hospitality and personal brand concept — site design and identity work in progress.',tags:['Biz','Branding','Web'],link:'https://github.com/dras8u/BuelvasEscape',code:'https://github.com/dras8u/BuelvasEscape'},
+      {name:'The Glitch That Thinks',type:'writing',desc:'A philosophical essay probing machine consciousness and the nature of awareness. Published 2025.',tags:['Essay','Philosophy','AI'],link:'https://medium.com/@esdras-buelvas/the-glitch-that-thinks-522a3e8c1e74',code:''},
+      {name:'The Unwritten Book of Bushido',type:'writing',desc:'Long-form fiction project exploring honor, identity, and warrior philosophy through speculative narrative.',tags:['Fiction','Worldbuilding','Long-form'],link:'',code:''},
+      {name:'EsdrasWeb (Experiments)',type:'web',desc:'A collection of site scaffolds and frontend experiments — where new ideas get tested.',tags:['HTML','CSS','JS'],link:'https://github.com/Isa4444/esdrasweb',code:'https://github.com/Isa4444/esdrasweb'},
+    ];
+
+    
+    const grid = document.getElementById('proj-grid');
+    const search = document.getElementById('proj-search');
+    const filters = document.getElementById('filters');
+    let activeFilter = 'all';
+
+    function renderProjects() {
+      const q = search.value.trim().toLowerCase();
+      const filtered = projects.filter(p => {
+        const matchType = activeFilter === 'all' || p.type === activeFilter;
+        const matchQ = q === '' || (p.name+' '+p.desc+' '+p.tags.join(' ')).toLowerCase().includes(q);
+        return matchType && matchQ;
+      });
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="no-results">No projects match that filter. Try something else.</div>';
+        return;
+      }
+      grid.innerHTML = filtered.map(p => {
+        const tags = p.tags.map(t=>`<span class="project-tag">${t}</span>`).join('');
+        const live = p.link ? `<a class="proj-btn live" href="${p.link}" target="_blank" rel="noopener">Live →</a>` : '';
+        const code = p.code ? `<a class="proj-btn code" href="${p.code}" target="_blank" rel="noopener">Code</a>` : '';
+        return `<div class="project-card">
+          <div class="project-type">${p.type}</div>
+          <div class="project-name">${p.name}</div>
+          <div class="project-desc">${p.desc}</div>
+          <div class="project-tags">${tags}</div>
+          <div class="project-links">${live}${code}</div>
+        </div>`;
+      }).join('');
     }
 
-    chips.addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;chips.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));c.classList.add('active');apply()})
-    q.addEventListener('input',apply)
-    mode.addEventListener('click',toggleMode)
+    filters.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-chip');
+      if (!btn) return;
+      filters.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.f;
+      renderProjects();
+    });
+    search.addEventListener('input', renderProjects);
+    renderProjects();
 
-    loadMode();apply()
+    
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = ['home','about','projects','work','contact'].map(id=>document.getElementById(id));
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY + 120;
+      sections.forEach((s,i) => {
+        if (!s) return;
+        if (s.offsetTop <= y && s.offsetTop + s.offsetHeight > y) {
+          navLinks.forEach(l=>l.style.color='');
+          if (navLinks[i]) navLinks[i].style.color='var(--text)';
+        }
+      });
+    });
   </script>
 </body>
 </html>
